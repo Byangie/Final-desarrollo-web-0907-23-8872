@@ -20,3 +20,11 @@ Principalmente solicité ayuda para configurar Sequelize, crear las migraciones 
 Delegué estas tareas porque necesitaba avanzar de manera organizada durante el tiempo limitado del examen. Sin embargo, fui ejecutando los comandos y comprobando los resultados mediante pruebas en PowerShell, verificando que las funcionalidades realmente trabajaran con la base de datos.
 
 ## C. Error de la inteligencia
+
+Error identificado: Durante la configuración del backend, la inteligencia artificial me proporcionó código utilizando CommonJS (require y module.exports), aunque mi proyecto estaba configurado para trabajar con ES Modules (import y export).
+
+¿Cómo me di cuenta? Al revisar el archivo package.json, observé que tenía configurado "type": "module", por lo que utilizar CommonJS en los archivos .js de la aplicación generaba una incompatibilidad con la estructura del proyecto.
+
+¿Cómo lo corregí? Le indiqué a la IA que debía respetar la configuración de ES Modules. Finalmente, mantuve impor y export en los archivos del backend y utilicé la extensión .cjs únicamente en los archivos que necesitaban CommonJS para funcionar con Sequelize CLI, como las migraciones y la configuración.
+
+Aprendizaje:Comprendí que no todas las respuestas de la IA son directamente compatibles con un proyecto y que es importante revisar la configuración y comprender el código antes de implementarlo.
