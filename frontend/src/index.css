@@ -1,0 +1,12 @@
+html {
+  font-family: "DM Sans", Arial, sans-serif;
+  background: #0b1120;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
